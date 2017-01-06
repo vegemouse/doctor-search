@@ -1,1 +1,164 @@
 @import 'vendor/normalize.scss';
+
+* {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", helvetica, sans-serif;
+}
+
+body {
+  background-color: lighten(lightblue, 15%);
+  color: #333;
+}
+
+.intro {
+  margin: 0;
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../img/portland.jpg");
+    z-index: -1;
+  }
+}
+
+.icon {
+  width: 30%;
+  filter: invert(1);
+}
+
+.search {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  h1 {
+    margin: 10px;
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: normal;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    input {
+      font-size: 1.6em;
+    }
+  }
+}
+
+.button {
+  height: 50px;
+  margin: 0;
+  border: 0;
+  border-radius: 0 10px 10px 0;
+  background-color: lightblue;
+  transition: background-color 150ms ease-in-out;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding: 0 10px;
+  &:hover, &:focus, &:active {
+    outline: 0;
+    background-color: darken(lightblue, 20%);
+    cursor: pointer;
+  }
+}
+
+.buttonicon {
+  width: 25px;
+  position: relative;
+  top: 2px;
+}
+
+#issueSearch, #specialtySearch {
+  margin: 15px;
+}
+
+
+#issue {
+  margin: 0;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px 0 0 10px;
+  border: 0;
+  padding: 10px;
+  font-size: 1.6em;
+  &:hover, &:active, &:focus {
+    outline: 0;
+  }
+}
+
+#specialties {
+  margin: 0;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px 0 0 10px;
+  -webkit-appearance: none;
+  background-color: white;
+  border: 0;
+  color: #999;
+  padding: 10px;
+  font-size: 1.6em;
+  &:hover, &:active, &:focus {
+    outline: 0;
+  }
+}
+
+#doctors {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: lighten(lightblue, 15%);
+}
+
+.doctor {
+  background-color: white;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 20px;
+  flex: 1 30%;
+  border: 3px solid #ddd;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25em;
+  }
+  &-practice {
+    text-align: center;
+    color: #777;
+    margin: 5px;
+  }
+  &-image {
+    width: 50%;
+    margin: 5px;
+  }
+  &-bio {
+    text-align: center;
+    margin-top: 10px;
+    border-top: 2px solid lightgrey;
+    padding-top: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    flex: 1 40%;
+  }
+  @media screen and (max-width: 450px) {
+    flex: 1 100%;
+  }
+}

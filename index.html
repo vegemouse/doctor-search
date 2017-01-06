@@ -5,13 +5,25 @@
     <link rel="stylesheet" href="build/css/application.css">
     <script src="build/js/vendor.min.js"></script>
     <script src="build/js/app.js"></script>
-    <title>Doctor Search</title>
+    <title>Portland Doctor Search</title>
   </head>
   <body>
-    <form id="getDoctors">
-      <input id="issue" type="text">
-      <button type="submit">Search</button>
-    </form>
+    <div class="intro">
+      <div class="search">
+        <img class="icon" src="img/doctoricon.png" alt="Doctor Search">
+        <h1>Portland Doctor Search</h1>
+        <form id="issueSearch">
+          <input id="issue" type="text" placeholder="Search by symptom">
+          <button class="button" type="submit"><img class="buttonicon" src="img/searchicon.png"></button>
+        </form>
+        <form id="specialtiesSearch">
+          <select id="specialties" name="specialties">
+            <option value="none">Search by specialty</option>
+          </select>
+          <button class="button" type="submit"><img class="buttonicon" src="img/searchicon.png"></button>
+        </form>
+      </div>
+    </div>
     <div id="doctors"></div>
   </body>
 </html>
