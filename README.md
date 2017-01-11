@@ -19,7 +19,7 @@
 * BetterDoctor API
 
 ## Setup Instructions
-Clone repository and run 'npm install' and 'bower install'. Then run 'npm serve' to view site.
+Clone repository and run 'npm install' and 'bower install'. Then run 'npm serve'. API Key can be obtained from https://developer.betterdoctor.com/ and signing up. Once the API key is obtained, simply create a .env file exporting the API key as the variable 'APIKey'.
 
 ## License
 GPL 2017
